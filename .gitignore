@@ -1,0 +1,9 @@
+nsq-dataset-spec.md
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Downloaded alert PDFs (57 MB): publish links + hashes instead, see data/raw/pdf_index.csv
+cache/
