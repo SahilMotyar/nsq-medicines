@@ -37,7 +37,9 @@ The data was collected by a script that requested pages slowly (one request ever
   or *description* (appearance). NSQ does not mean fake, and on its own it does not mean dangerous.
 - **Spurious**: defined in Section 17-B of the Drugs and Cosmetics Act, 1940. Broadly, a drug made under
   another drug's name, imitating another drug, or claiming to come from a manufacturer that did not make it.
-  Spurious batches often carry the name of a real company that had nothing to do with them.
+  Spurious batches often carry the name of a real company that had nothing to do with them. CDSCO's portal
+  does not show that company for spurious batches, and neither does this dataset. Product names can still
+  include a brand name, e.g. "(TELMA AM)".
 - **Central and state**: samples are tested either by CDSCO's own laboratories (*central*) or by state drug
   testing laboratories (*state*). CDSCO has published the two separately since May 2024.
 - **Revised lists**: some months were re-issued as a "Revised" list. Both versions are listed in `pdf_index.csv`.
@@ -55,10 +57,9 @@ The data was collected by a script that requested pages slowly (one request ever
 | `drug_name_raw` | Product name as published |
 | `batch_no` | Batch number as published |
 | `mfg_date`, `expiry_date` | Manufacturing and expiry month (`YYYY-MM`), parsed from the published text |
-| `manufacturer_raw` | Manufacturer name and address as published. For spurious batches this is the real maker, usually "Under Investigation". |
-| `label_manufacturer` | Spurious batches only: the company printed on the label, which in CDSCO's records says it did not make the batch |
+| `manufacturer_raw` | Manufacturer name and address as published. For spurious batches this is the real maker as CDSCO shows it, so far always "Under Investigation". |
 | `failure_raw` | The test or tests the sample failed, as published |
-| `firm_reply` | Spurious batches only: the labelled company's reply |
+| `firm_reply` | Spurious batches only: the reply from the company named on the label |
 | `reporting_source_raw` | Reporting source as published ("CDSCO lab", "State Lab", ...) |
 | `reporting_lab` | Laboratory or state authority that reported the batch |
 | `mfg_date_raw`, `expiry_date_raw` | Dates exactly as published |
